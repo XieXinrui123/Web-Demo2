@@ -1,107 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
-    <title>Study Abroad Consultant</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留学中介 - 英港新澳留学申请 | 一站式留学服务</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body{
+      font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(59, 130, 246,.2), transparent),
+                  radial-gradient(900px 500px at 90% 20%, rgba(168,85,247,.2), transparent),
+                  radial-gradient(800px 600px at 50% 100%, rgba(16,185,129,.1), transparent),
+                  #0f172a;
+      color: #f8fafc;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    .nav{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(20px);
+      background: rgba(15,23,42,.7);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    .glass{
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(25px);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+      transition: all 0.4s ease;
+    }
+    .glass:hover{
+      transform: translateY(-4px);
+      border-color: rgba(59,130,246,.3);
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,#3b82f6,#8b5cf6);
+      transition: all 0.3s;
+    }
+    .btn-primary:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(59,130,246,.3);
+    }
+    .gradient-text{
+      background: linear-gradient(90deg,#3b82f6,#a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .fade-in{
+      animation: fade 0.8s ease forwards;
+    }
+    @keyframes fade{
+      from{opacity:0; transform:translateY(20px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+    input:focus{
+      outline:none;
+      border-color:#3b82f6;
+      box-shadow:0 0 0 2px rgba(59,130,246,.2);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <nav class="bg-blue-600 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-white text-2xl font-bold">Consultant</h1>
-            <ul class="flex space-x-4">
-                <li><a href="#hero" class="text-white hover:underline">Home</a></li>
-                <li><a href="#about" class="text-white hover:underline">About</a></li>
-                <li><a href="#services" class="text-white hover:underline">Services</a></li>
-                <li><a href="#case-studies" class="text-white hover:underline">Case Studies</a></li>
-                <li><a href="#reviews" class="text-white hover:underline">Reviews</a></li>
-                <li><a href="#faq" class="text-white hover:underline">FAQ</a></li>
-                <li><a href="#contact" class="text-white hover:underline">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body>
 
-    <header id="hero" class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/random/1920x1080')">
-        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
-            <h2 class="text-white text-4xl font-bold">Your Journey to a Better Future</h2>
-        </div>
-    </header>
+<!-- 导航 -->
+<div class="nav px-6 py-4 flex justify-between items-center">
+  <div class="text-xl font-bold">留学中介品牌</div>
+  <div class="hidden md:flex gap-6 text-sm">
+    <a href="#service" class="hover:text-blue-400">留学服务</a>
+    <a href="#country" class="hover:text-blue-400">国家选择</a>
+    <a href="#case" class="hover:text-blue-400">成功案例</a>
+    <a href="#plan" class="hover:text-blue-400">服务方案</a>
+    <a href="#contact" class="hover:text-blue-400">联系我们</a>
+  </div>
+  <button class="btn-primary px-4 py-2 rounded-lg text-sm text-white">立即咨询</button>
+</div>
 
-    <section id="about" class="py-20 container mx-auto">
-        <h2 class="text-3xl font-bold mb-10">About Us</h2>
-        <p>We are a leading study abroad consultancy providing expert guidance on educational opportunities worldwide.</p>
-    </section>
+<!-- 首屏 -->
+<section class="min-h-screen flex items-center justify-center px-4 pt-24 fade-in">
+  <div class="max-w-5xl text-center">
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+      一站式<span class="gradient-text">高端留学申请</span><br>
+      让每一位学生都能上名校
+    </h1>
+    <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+      专注留学申请10年＋，英美澳加新欧亚全国家覆盖，
+      从选校、文书、面试、签证到行前指导，全程一对一管家式服务。
+    </p>
+    <div class="mt-8 flex justify-center gap-4 flex-wrap">
+      <button class="btn-primary px-8 py-3 rounded-lg text-white font-medium">免费获取方案</button>
+      <button class="px-8 py-3 rounded-lg border border-white/20 hover:bg-white/5">查看录取案例</button>
+    </div>
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-300">
+      <div><div class="text-2xl font-bold gradient-text">96%</div><div class="text-sm mt-1">名校录取率</div></div>
+      <div><div class="text-2xl font-bold gradient-text">5000+</div><div class="text-sm mt-1">成功案例</div></div>
+      <div><div class="text-2xl font-bold gradient-text">30+</div><div class="text-sm mt-1">覆盖国家</div></div>
+      <div><div class="text-2xl font-bold gradient-text">100+</div><div class="text-sm mt-1">顾问团队</div></div>
+    </div>
+  </div>
+</section>
 
-    <section id="services" class="py-20 bg-gray-200">
-        <h2 class="text-3xl font-bold mb-10 text-center">Our Services</h2>
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-xl font-semibold">Consultation</h3>
-                <p>Personalized consultation for students.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-xl font-semibold">Application Assistance</h3>
-                <p>Help with the application process to various universities.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-xl font-semibold">Visa Support</h3>
-                <p>Guidance on visa applications and regulations.</p>
-            </div>
-        </div>
-    </section>
+<!-- 服务介绍 -->
+<section id="service" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold">我们提供的<span class="gradient-text">留学服务</span></h2>
+    <p class="text-gray-400 mt-2">全程透明、专业、高效，助力圆梦世界名校</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-3">本科留学申请</h3>
+      <p class="text-gray-400 text-sm">高中申本科，背景提升、选校定位、文书撰写、面试辅导。</p>
+    </div>
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-3">硕士/博士申请</h3>
+      <p class="text-gray-400 text-sm">研究生精准定位，套磁指导，研究计划，全流程精细化服务。</p>
+    </div>
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-3">低龄留学/游学</h3>
+      <p class="text-gray-400 text-sm">中学、预科、夏校、插班，安全监护与海外生活全程安排。</p>
+    </div>
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-3">文书定制</h3>
+      <p class="text-gray-400 text-sm">外籍导师润色，个人陈述、推荐信、简历1v1深度打造。</p>
+    </div>
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-3">签证办理</h3>
+      <p class="text-gray-400 text-sm">材料整理、面签培训、加急办理，通过率近100%。</p>
+    </div>
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-3">背景提升</h3>
+      <p class="text-gray-400 text-sm">科研项目、实习、竞赛、志愿者，提升申请竞争力。</p>
+    </div>
+  </div>
+</section>
 
-    <section id="case-studies" class="py-20 container mx-auto">
-        <h2 class="text-3xl font-bold mb-10">Case Studies</h2>
-        <p>See how we have helped students achieve their dreams.</p>
-        <ul class="list-disc list-inside mt-5">
-            <li>Student A: Studied in Canada.</li>
-            <li>Student B: Accepted into a UK university.</li>
-            <li>Student C: Successful visa application.</li>
-        </ul>
-    </section>
+<!-- 国家地区 -->
+<section id="country" class="py-16 px-4 bg-white/5">
+  <div class="max-w-6xl mx-auto text-center mb-10">
+    <h2 class="text-3xl font-bold">热门<span class="gradient-text">留学国家</span></h2>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+    <div class="glass p-4 text-center">美国</div>
+    <div class="glass p-4 text-center">英国</div>
+    <div class="glass p-4 text-center">加拿大</div>
+    <div class="glass p-4 text-center">澳大利亚</div>
+    <div class="glass p-4 text-center">新西兰</div>
+    <div class="glass p-4 text-center">中国香港</div>
+    <div class="glass p-4 text-center">新加坡</div>
+    <div class="glass p-4 text-center">日本</div>
+    <div class="glass p-4 text-center">韩国</div>
+    <div class="glass p-4 text-center">欧洲</div>
+  </div>
+</section>
 
-    <section id="reviews" class="py-20 bg-gray-200">
-        <h2 class="text-3xl font-bold mb-10 text-center">What Our Clients Say</h2>
-        <div class="container mx-auto">
-            <blockquote class="border-l-4 border-blue-600 p-4 italic">
-                "Thanks to the consultants, I got into my dream school!"
-                <cite>- Happy Student</cite>
-            </blockquote>
-        </div>
-    </section>
+<!-- 成功案例 -->
+<section id="case" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold">最新<span class="gradient-text">成功录取</span>案例</h2>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="glass p-6">
+      <div class="text-sm text-blue-400 mb-2">英国 · 硕士</div>
+      <div class="font-semibold text-lg mb-1">G同学 · 双非</div>
+      <div class="text-gray-300 mb-3">GPA 82 → 伦敦大学学院（UCL）</div>
+      <div class="text-xs text-gray-400">低分高录，文书突出科研与实习优势</div>
+    </div>
+    <div class="glass p-6">
+      <div class="text-sm text-blue-400 mb-2">中国香港 · 硕士</div>
+      <div class="font-semibold text-lg mb-1">Z同学 · 本科</div>
+      <div class="text-gray-300 mb-3">GPA 85 → 香港大学（HKU）</div>
+      <div class="text-xs text-gray-400">全程规划，精准选专业，面试辅导</div>
+    </div>
+    <div class="glass p-6">
+      <div class="text-sm text-blue-400 mb-2">新加坡 · 硕士</div>
+      <div class="font-semibold text-lg mb-1">L同学 · 211</div>
+      <div class="text-gray-300 mb-3">GPA 80 → 新加坡国立大学（NUS）</div>
+      <div class="text-xs text-gray-400">跨专业申请，精准套磁，顺利录取</div>
+    </div>
+  </div>
+</section>
 
-    <section id="faq" class="py-20 container mx-auto">
-        <h2 class="text-3xl font-bold mb-10">Frequently Asked Questions</h2>
-        <div class="mb-4">
-            <h3 class="font-semibold">1. How do I start the application process?</h3>
-            <p>Contact us for personalized guidance.</p>
-        </div>
-        <div class="mb-4">
-            <h3 class="font-semibold">2. What documents are needed?</h3>
-            <p>We will provide a checklist after your initial consultation.</p>
-        </div>
-    </section>
+<!-- 服务方案 -->
+<section id="plan" class="py-20 px-4 bg-white/5">
+  <div class="max-w-6xl mx-auto text-center mb-12">
+    <h2 class="text-3xl font-bold">留学<span class="gradient-text">服务方案</span></h2>
+    <p class="text-gray-400 mt-2">根据学生情况定制，从普通申请到保录全程服务</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-2">基础申请</h3>
+      <div class="text-2xl font-bold mb-4">¥ 8800 起</div>
+      <div class="text-sm text-gray-300 space-y-1">
+        <p>• 选校方案</p>
+        <p>• 文书基础润色</p>
+        <p>• 申请提交</p>
+        <p>• 签证指导</p>
+      </div>
+    </div>
+    <div class="glass p-6 border-2 border-blue-500/50 relative">
+      <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">热门推荐</div>
+      <h3 class="text-xl font-semibold mb-2">全程无忧</h3>
+      <div class="text-2xl font-bold mb-4">¥ 19800 起</div>
+      <div class="text-sm text-gray-300 space-y-1">
+        <p>• 一对一顾问全程</p>
+        <p>• 高端文书定制</p>
+        <p>• 面试辅导</p>
+        <p>• 签证+行前指导</p>
+        <p>• 海外接机住宿协助</p>
+      </div>
+    </div>
+    <div class="glass p-6">
+      <h3 class="text-xl font-semibold mb-2">高端保录</h3>
+      <div class="text-2xl font-bold mb-4">¥ 面议</div>
+      <div class="text-sm text-gray-300 space-y-1">
+        <p>• 世界TOP50名校</p>
+        <p>• 背景提升规划</p>
+        <p>• 内推资源</p>
+        <p>• 不成功全额退款</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="contact" class="py-20 bg-gray-200">
-        <h2 class="text-3xl font-bold mb-10 text-center">Contact Us</h2>
-        <form class="container mx-auto bg-white p-6 rounded-lg shadow">
-            <label class="block mb-2" for="name">Name:</label>
-            <input class="border border-gray-300 p-2 mb-4 w-full" type="text" id="name" name="name" required>
-            <label class="block mb-2" for="email">Email:</label>
-            <input class="border border-gray-300 p-2 mb-4 w-full" type="email" id="email" name="email" required>
-            <button class="bg-blue-600 text-white p-2 rounded" type="submit">Submit</button>
-        </form>
-    </section>
+<!-- 咨询表单 -->
+<section id="contact" class="py-20 px-4 max-w-4xl mx-auto">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold">立即<span class="gradient-text">免费咨询</span></h2>
+    <p class="text-gray-400 mt-2">留下信息，资深留学顾问1对1为你解答</p>
+  </div>
+  <div class="glass p-8">
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <input type="text" placeholder="姓名" class="bg-black/30 border border-white/10 rounded-lg p-3 text-white">
+      <input type="tel" placeholder="电话/微信" class="bg-black/30 border border-white/10 rounded-lg p-3 text-white">
+    </div>
+    <input type="text" placeholder="目前学历/目标国家" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white mb-4">
+    <textarea placeholder="简单说明你的留学需求..." class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white h-24"></textarea>
+    <button class="btn-primary w-full py-3 rounded-lg text-white font-medium mt-4">提交咨询</button>
+  </div>
+</section>
 
-    <footer class="bg-blue-600 p-4 text-center text-white">
-        <p>&copy; 2026 Study Abroad Consultant. All rights reserved.</p>
-    </footer>
+<!-- 底部 -->
+<footer class="py-10 text-center text-gray-400 text-sm">
+  <div>留学中介品牌 © 2025 保留所有权利</div>
+  <div class="mt-2">专注高端留学申请 | 全程一对一 | 名校录取率96%</div>
+</footer>
+
 </body>
-<script>
-    // Example JavaScript functionality (if needed)
-    document.querySelector('form').addEventListener('submit', function(event) {
-        alert('Form submitted successfully!');
-    });
-</script>
 </html>
