@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+    <title>Study Abroad Consultant</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Consultant</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#hero" class="text-white hover:underline">Home</a></li>
+                <li><a href="#about" class="text-white hover:underline">About</a></li>
+                <li><a href="#services" class="text-white hover:underline">Services</a></li>
+                <li><a href="#case-studies" class="text-white hover:underline">Case Studies</a></li>
+                <li><a href="#reviews" class="text-white hover:underline">Reviews</a></li>
+                <li><a href="#faq" class="text-white hover:underline">FAQ</a></li>
+                <li><a href="#contact" class="text-white hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/random/1920x1080')">
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+            <h2 class="text-white text-4xl font-bold">Your Journey to a Better Future</h2>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 container mx-auto">
+        <h2 class="text-3xl font-bold mb-10">About Us</h2>
+        <p>We are a leading study abroad consultancy providing expert guidance on educational opportunities worldwide.</p>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-200">
+        <h2 class="text-3xl font-bold mb-10 text-center">Our Services</h2>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold">Consultation</h3>
+                <p>Personalized consultation for students.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold">Application Assistance</h3>
+                <p>Help with the application process to various universities.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold">Visa Support</h3>
+                <p>Guidance on visa applications and regulations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-studies" class="py-20 container mx-auto">
+        <h2 class="text-3xl font-bold mb-10">Case Studies</h2>
+        <p>See how we have helped students achieve their dreams.</p>
+        <ul class="list-disc list-inside mt-5">
+            <li>Student A: Studied in Canada.</li>
+            <li>Student B: Accepted into a UK university.</li>
+            <li>Student C: Successful visa application.</li>
+        </ul>
+    </section>
+
+    <section id="reviews" class="py-20 bg-gray-200">
+        <h2 class="text-3xl font-bold mb-10 text-center">What Our Clients Say</h2>
+        <div class="container mx-auto">
+            <blockquote class="border-l-4 border-blue-600 p-4 italic">
+                "Thanks to the consultants, I got into my dream school!"
+                <cite>- Happy Student</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 container mx-auto">
+        <h2 class="text-3xl font-bold mb-10">Frequently Asked Questions</h2>
+        <div class="mb-4">
+            <h3 class="font-semibold">1. How do I start the application process?</h3>
+            <p>Contact us for personalized guidance.</p>
+        </div>
+        <div class="mb-4">
+            <h3 class="font-semibold">2. What documents are needed?</h3>
+            <p>We will provide a checklist after your initial consultation.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-200">
+        <h2 class="text-3xl font-bold mb-10 text-center">Contact Us</h2>
+        <form class="container mx-auto bg-white p-6 rounded-lg shadow">
+            <label class="block mb-2" for="name">Name:</label>
+            <input class="border border-gray-300 p-2 mb-4 w-full" type="text" id="name" name="name" required>
+            <label class="block mb-2" for="email">Email:</label>
+            <input class="border border-gray-300 p-2 mb-4 w-full" type="email" id="email" name="email" required>
+            <button class="bg-blue-600 text-white p-2 rounded" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer class="bg-blue-600 p-4 text-center text-white">
+        <p>&copy; 2026 Study Abroad Consultant. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // Example JavaScript functionality (if needed)
+    document.querySelector('form').addEventListener('submit', function(event) {
+        alert('Form submitted successfully!');
+    });
+</script>
+</html>
